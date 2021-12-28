@@ -1,9 +1,10 @@
 @import "responsive";
 @import "vue";
 
-// Variables
-
 // Font
+$defaultFont: "Open Sans", sans-serif;
+
+// Variables
 
 // Font Sizes
 
@@ -12,5 +13,12 @@
 // Shadows
 
 // Sizes
+
+// Global style
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $defaultFont;
+}
 
 // Util
