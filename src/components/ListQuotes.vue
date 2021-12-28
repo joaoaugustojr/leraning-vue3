@@ -18,8 +18,21 @@
         <td>{{quote.low}}</td>
         <td>{{quote.pctChange}}</td>
         <td>
-          <button type="button">
+          <button
+            type="button"
+            v-if="!listenQuotes.includes(key)"
+            @click="$emit('listen', key)"
+            title="Add"
+          >
             <i class="fas fa-plus"></i>
+          </button>
+          <button
+            type="button"
+            v-else
+            @click="$emit('unlisten', key)"
+            title="Remove"
+          >
+            <i class="fas fa-minus"></i>
           </button>
         </td>
       </tr>
@@ -32,8 +45,14 @@ export default {
   props: {
     quotes: {
       type: Object,
-      required: true,
+      required: true
+    },
+    listenQuotes: {
+      type: Array,
+      required: true
     }
-  }
+  },
+
+  emits: ['listen', 'unlisten']
 }
 </script>
