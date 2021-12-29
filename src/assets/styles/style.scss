@@ -30,6 +30,7 @@
 .quotes {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 240px;
   background-color: white;
   padding: 1rem;
@@ -100,8 +101,8 @@
       button {
         border: none;
         outline: none;
-        background-color: #2f16a1;
-        width: 20%;
+        background-color: #5d3ded;
+        width: 100%;
         border-radius: 20px;
         color: white;
         height: 25px;
