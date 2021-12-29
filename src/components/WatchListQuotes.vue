@@ -1,6 +1,6 @@
 <template>
+  <cite>Refresh in <b>{{updateTime}}</b>s</cite>
   <list-quotes :quotes="quotes" :listen-quotes="listenQuotes" @unlisten="onUnlisten"></list-quotes>
-  <cite>Refresh in <b>{{updateTime}}s</b></cite>
 </template>
 
 <script>
